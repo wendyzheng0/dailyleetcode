@@ -1,4 +1,5 @@
 from bisect import bisect_left
+from typing import List
 
 ###
 # 给你一个下标从 0 开始长度为 n 的整数数组 nums 和两个 正 整数 k 和 dist 。
@@ -34,3 +35,12 @@ class Solution:
                 res = arrsum
             # print(f"{cand}, {arrsum}")
         return res + nums[0]
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    print(sol.minimumCost([1,3,2,6,4,2], 3, 3)) # 5
+    print(sol.minimumCost([10,1,2,2,2,1], 4, 3)) # 15
+    print(sol.minimumCost([10,8,18,9], 3, 1)) # 36
+    print(sol.minimumCost([1,6,4,7,9,6,1], 4, 4)) # 12
+    print(sol.minimumCost([2,6,3,8,3,1,1], 3, 4)) # 4
